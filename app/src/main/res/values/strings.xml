@@ -7,4 +7,7 @@
     <string name="password_error_response">فضلا تأكد من كلمة المرور</string>
     <string name="progress_title">خوارزميون</string>
     <string name="progress_msg">الرجاء الإنتظار</string>
+    <string name="edit_txt_email">البريد الإلكتروني</string>
+    <string name="edit_txt_password">كلمة المرور</string>
+    <string name="enter">دخول</string>
 </resources>

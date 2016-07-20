@@ -11,37 +11,37 @@
 
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/etActSignEmail"
-            android:textAlignment="center"
-            android:inputType="textEmailAddress"
-            android:hint="البريد الإلكتروني"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_txt_email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/etActSignPassword"
-            android:layout_marginTop="5dp"
-            android:textAlignment="center"
-            android:inputType="textPassword"
-            android:hint="كلمة المرور"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:onClick="navigator"
-            android:id="@+id/btnActSignInEnter"
-            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/edit_txt_password"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btnActSignInEnter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:background="@color/colorPrimary"
-            android:text="دخول"
+            android:hint="@string/enter"
+            android:onClick="navigator"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
