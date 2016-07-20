@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="خوارزميون"
+            android:text="@string/app_name"
             android:textSize="35sp" />
 
     </LinearLayout>
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll"
         android:layout_marginTop="5dp"
-        android:text="المبرمج قبل البرنامج"
+        android:text="@string/app_slogan"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
@@ -56,12 +56,12 @@
 
 
         <Button
-            android:onClick="navigator"
             android:id="@+id/btnActMainSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="تسجيل الدخول"
+            android:onClick="navigator"
+            android:text="@string/login"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@color/colorPrimary"
-            android:text="عضوية جديدة"
+            android:text="@string/new_account"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
