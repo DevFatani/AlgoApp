@@ -16,7 +16,9 @@
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <EditText
+            android:id="@+id/etActSignEmail"
             android:textAlignment="center"
             android:inputType="textEmailAddress"
             android:hint="البريد الإلكتروني"
@@ -24,6 +26,7 @@
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/etActSignPassword"
             android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:inputType="textPassword"

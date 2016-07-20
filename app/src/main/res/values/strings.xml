@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">خوارزميون</string>
     <string name="algo_sign_in_title">تسجيل الدخول</string>
+    <string name="email_validation_error">فضلا أدخل البريد الإلكتروني</string>
+    <string name="password_validation_error">فضلا أدخل كلمة المرور</string>
+    <string name="email_error_response">فضلا تأكد من البريد الإلكتروني</string>
+    <string name="password_error_response">فضلا تأكد من كلمة المرور</string>
+    <string name="progress_title">خوارزميون</string>
+    <string name="progress_msg">الرجاء الإنتظار</string>
 </resources>
