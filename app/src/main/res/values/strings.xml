@@ -13,4 +13,19 @@
     <string name="enter">دخول</string>
     <string name="new_account">عضوية جديدة</string>
     <string name="login">تسجيل الدخول</string>
+    <string name="tab_bar1">آخر الأخبار</string>
+    <string name="tab_bar2">التصنيفات</string>
+    <string name="title_activity_algo_main_services">المجتمع البرمجي</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="loading">جاري التحميل</string>
+    <string name="play">استماع</string>
+    <string name="stop">ايقاف</string>
 </resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_algo_splash_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/s_dark_red"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.algorithmers.android.algoapp.AlgoSplashScreenActivity">
+
+    <com.algorithmers.android.algoapp.widget.AlgoTextView
+        android:id="@+id/slug1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="مجتمع"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_x3" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.algorithmers.android.algoapp.widget.AlgoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#"
+            android:textColor="#f17d18"
+            android:textSize="@dimen/font_x7"
+            android:textStyle="bold" />
+
+        <com.algorithmers.android.algoapp.widget.AlgoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_x7" />
+    </LinearLayout>
+
+    <com.algorithmers.android.algoapp.widget.AlgoTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_slogan"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_x3"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/regular_margin"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivContentImg"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:src="@drawable/ic_android_24dp" />
+
+
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                style="@style/AlogBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_favorite_black_24dp" />
+
+            <com.algorithmers.android.algoapp.widget.AlgoTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="المفضلة"
+                android:textSize="@dimen/font_mid" />
+
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                style="@style/AlogBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_thumb_up_black_24dp" />
+
+            <com.algorithmers.android.algoapp.widget.AlgoTextView
+                android:id="@+id/tvContentLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="٩٠"
+                android:textSize="@dimen/font_mid" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+            <com.algorithmers.android.algoapp.widget.AlgoTextView
+                android:id="@+id/tvContentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/regular_margin"
+                android:text="مُحرك كهربائي من الداخل"
+                android:textColor="#51e1cb"
+                android:textSize="@dimen/font_x2" />
+
+            <com.algorithmers.android.algoapp.widget.AlgoTextView
+                android:id="@+id/tvContentBody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|start"
+                android:gravity="start"
+                android:text="يُمكن اعتبار الحديث عن المحرك الكهربائي هو في نفس الوقت حديث عن المغناطيس والمغناطيسية، حيث يَستخدم المُحرك المغناطيس لإنتاج الحركة. بما أننا نعرف أن القانون الأساسي لكل المغانط هو أن (الأقطاب المتشابهة تتنافر ، والأقطاب المختلفة تتجاذب)، فإن قوى الجذب والتنافر تلك داخل المحرك الكهربائي تتسبب في خلق حركة دورانية."
+                android:textSize="@dimen/font_x"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/regular_margin"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.algorithmers.android.algoapp.widget.AlgoTextView
+            android:id="@+id/tvContentBoxTag"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/regular_margin"
+            android:layout_weight="1.2"
+            android:text="#ios #android #java #db #ai"
+            android:textSize="@dimen/font_large"
+            android:textStyle="bold" />
+
+        <com.algorithmers.android.algoapp.widget.AlgoTextView
+            android:id="@+id/tvMainCategory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center"
+            android:layout_weight=".8"
+            android:text="Mobile Development"
+            android:textColor="@color/b_dark_orange"
+            android:textSize="@dimen/font_large"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:background="#60e7e6e0" />
+</LinearLayout>

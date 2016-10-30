@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_all_content"
+            android:icon="@drawable/ic_view_module_black_24dp"
+            android:title="الكل" />
+        <item
+            android:id="@+id/nav_txt"
+            android:icon="@drawable/ic_import_contacts_black_24dp"
+            android:title="نصوص" />
+        <item
+            android:id="@+id/nav_image"
+            android:icon="@drawable/ic_photo_library_black_24dp"
+            android:title="صور" />
+
+        <item
+            android:id="@+id/nav_video"
+            android:icon="@drawable/ic_play_circle_filled_black_24dp"
+            android:title="فيديو" />
+        <item
+            android:id="@+id/nav_audio"
+            android:icon="@drawable/ic_headset_black_24dp"
+            android:title="صوت" />
+    </group>
+
+    <item android:title="التواصل">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="راسلنا" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="عن البرنامج" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_keyboard_return_black_24dp"
+                android:title="تسجيل الخروج" />
+
+
+        </menu>
+    </item>
+
+</menu>

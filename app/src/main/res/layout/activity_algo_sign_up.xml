@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_algo_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/s_dark_red"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.algorithmers.android.algoapp.AlgoSignUpActivity">
+
+    <com.algorithmers.android.algoapp.widget.AlgoTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="ادخل بياناتك"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_x4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <com.algorithmers.android.algoapp.widget.AlgoEditText
+            android:id="@+id/editText3"
+            style="@style/AlgoEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_white_fill"
+            android:hint="ادخل اسمك الكامل"
+            android:textSize="@dimen/font_large" />
+
+        <com.algorithmers.android.algoapp.widget.AlgoEditText
+            style="@style/AlgoEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_white_fill"
+            android:hint="ادخل البريد الإلكتروني"
+            android:textSize="@dimen/font_large" />
+
+        <com.algorithmers.android.algoapp.widget.AlgoEditText
+            style="@style/AlgoEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_white_fill"
+            android:hint="ادخل رقم الجوال"
+            android:textSize="@dimen/font_large" />
+
+        <com.algorithmers.android.algoapp.widget.AlgoEditText
+            style="@style/AlgoEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_white_fill"
+            android:hint="ادخل كلمة المرور"
+            android:textSize="@dimen/font_large" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.algorithmers.android.algoapp.widget.AlgoRadioButton
+                android:id="@+id/rbActPersonalInformationUserIsMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/white"
+                android:checked="true"
+                android:text="ذكر"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold" />
+
+            <com.algorithmers.android.algoapp.widget.AlgoRadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/white"
+                android:text="انثى"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+
+        <com.algorithmers.android.algoapp.widget.AlgoButton
+            style="@style/AlogBtn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="nav"
+            android:background="@drawable/rounded_corners_fill"
+            android:text="انضم لنا"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_x2" />
+
+
+    </LinearLayout>
+</RelativeLayout>

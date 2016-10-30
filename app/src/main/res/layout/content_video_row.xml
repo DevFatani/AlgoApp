@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/regular_margin"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+
+    <com.pierfrancescosoffritti.youtubeplayer.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="@dimen/regular_margin" />
+
+    <include layout="@layout/content_generic_row" />
+</LinearLayout>
