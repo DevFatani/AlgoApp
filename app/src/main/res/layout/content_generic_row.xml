@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/regular_margin"
+    android:layout_marginTop="@dimen/regular_margin"
+    android:layout_marginEnd="@dimen/regular_margin"
     android:layoutDirection="rtl"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -16,8 +18,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight=".5"
+            android:layout_margin="@dimen/regular_margin"
+            android:layout_weight=".3"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -65,8 +67,8 @@
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
             android:orientation="vertical">
 
             <com.algorithmers.android.algoapp.widget.AlgoTextView
@@ -78,15 +80,10 @@
                 android:textColor="#51e1cb"
                 android:textSize="@dimen/font_x2" />
 
-            <com.algorithmers.android.algoapp.widget.AlgoTextView
+            <WebView
                 android:id="@+id/tvContentBody"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical|start"
-                android:gravity="start"
-                android:text="يُمكن اعتبار الحديث عن المحرك الكهربائي هو في نفس الوقت حديث عن المغناطيس والمغناطيسية، حيث يَستخدم المُحرك المغناطيس لإنتاج الحركة. بما أننا نعرف أن القانون الأساسي لكل المغانط هو أن (الأقطاب المتشابهة تتنافر ، والأقطاب المختلفة تتجاذب)، فإن قوى الجذب والتنافر تلك داخل المحرك الكهربائي تتسبب في خلق حركة دورانية."
-                android:textSize="@dimen/font_x"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 

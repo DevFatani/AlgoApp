@@ -6,6 +6,6 @@
         android:width="5px"
         android:color="@color/white" />
     <gradient
-        android:endColor="@color/s_dark_pink"
-        android:startColor="@color/s_light_purple" />
+        android:endColor="@color/b_dark_orange"
+        android:startColor="@color/b_dark_orange" />
 </shape>

@@ -15,15 +15,10 @@
         android:src="@drawable/ic_assistant_photo_black_24dp" />
 
 
-    <com.algorithmers.android.algoapp.widget.AlgoTextView
+    <WebView
         android:id="@+id/tvAdBody"
         android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical|start"
-        android:layout_weight="1.7"
-        android:gravity="start|center"
-        android:text="يُمكن اعتبار الحديث عن المحرك الكهربائي هو في نفس الوقت حديث عن المغناطيس والمغناطيسية، حيث يَستخدم المُحرك المغناطيس لإنتاج الحركة. بما أننا نعرف أن القانون الأساسي لكل المغانط هو أن (الأقطاب المتشابهة تتنافر ، والأقطاب المختلفة تتجاذب)، فإن قوى الجذب والتنافر تلك داخل المحرك الكهربائي تتسبب في خلق حركة دورانية."
-        android:textSize="@dimen/font_x"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content"
+        android:layout_weight="1.7" />
 
 </LinearLayout>

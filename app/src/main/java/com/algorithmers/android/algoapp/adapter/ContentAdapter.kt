@@ -13,6 +13,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import android.widget.ImageView
 import android.widget.TextView
 import com.algorithmers.android.algoapp.*
@@ -31,8 +32,6 @@ class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var context: Context? = null
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): RecyclerView.ViewHolder {
-
-        Log.v(toString(), "view type $viewType")
         if (viewType == VIDEO) {
             return VideoViewHolder(LayoutInflater.from(parent!!.context).inflate(R.layout.content_video_row, parent, false))
         } else if (viewType == AD) {
@@ -66,11 +65,11 @@ class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private fun displayVideo(videoViewHolder: VideoViewHolder, position: Int) {
         val video = this.contents[position] as Video
-        videoViewHolder.contentBody!!.text = video.txt
         videoViewHolder.contentName!!.text = video.name
-        videoViewHolder.contentMainCategory!!.text = video.category.name
-        videoViewHolder.contentTagBox!!.text = this.setTags(video.category.subCategories)
+//        videoViewHolder.contentMainCategory!!.text = video.category.name
+//        videoViewHolder.contentTagBox!!.text = this.setTags(video.category.subCategories)
         videoViewHolder.contentLike!!.text = String.format(Locale.getDefault(), "%d", video.like)
+        videoViewHolder.contentBody!!.loadDataWithBaseURL(null, this.setJustifyText(body = video.txt), HTML_FORMAT, UTF, null)
 
         this.setContentIcon(contentImg = videoViewHolder.contentImg, viewType = VIDEO)
         this.initYouTubePlayer(youTubePlayer = videoViewHolder.youTube, videoId = video.videoId, videoDuration = video.duration)
@@ -78,23 +77,23 @@ class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private fun displayAudio(audioViewHolder: AudioViewHolder, position: Int) {
         val audio = this.contents[position] as Audio
-        audioViewHolder.contentBody!!.text = audio.txt
         audioViewHolder.contentName!!.text = audio.name
         audioViewHolder.contentMainCategory!!.text = audio.category.name
         audioViewHolder.contentTagBox!!.text = this.setTags(audio.category.subCategories)
         audioViewHolder.contentLike!!.text = String.format(Locale.getDefault(), "%d", audio.like)
+        audioViewHolder.contentBody!!.loadDataWithBaseURL(null, this.setJustifyText(body = audio.txt), HTML_FORMAT, UTF, null)
 
-        this.setContentIcon(contentImg = audioViewHolder.contentImg, viewType = AUDIO)
+//        this.setContentIcon(contentImg = audioViewHolder.contentImg, viewType = AUDIO)
         this.downloadAudio(audioPlayerView = audioViewHolder.audioPlayer, url = audio.audioSrc)
     }
 
     private fun displayImg(imageViewHolder: ImageViewHolder, position: Int) {
         val image = this.contents[position] as Image
-        imageViewHolder.contentBody!!.text = image.txt
         imageViewHolder.contentName!!.text = image.name
         imageViewHolder.contentMainCategory!!.text = image.category.name
         imageViewHolder.contentTagBox!!.text = this.setTags(image.category.subCategories)
         imageViewHolder.contentLike!!.text = String.format(Locale.getDefault(), "%d", image.like)
+        imageViewHolder.contentBody!!.loadDataWithBaseURL(null, this.setJustifyText(body = image.txt), HTML_FORMAT, UTF, null)
 
         this.setContentIcon(contentImg = imageViewHolder.contentImg, viewType = IMAGE)
         this.downloadImage(url = image.src, ivContentImgSrc = imageViewHolder.ivContentImgSrc)
@@ -103,19 +102,19 @@ class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private fun displayTxt(mainViewHolder: MainViewHolder, position: Int) {
         val txt = this.contents[position] as Txt
-        mainViewHolder.contentBody!!.text = txt.txt
         mainViewHolder.contentName!!.text = txt.name
         mainViewHolder.contentMainCategory!!.text = txt.category.name
         mainViewHolder.contentTagBox!!.text = this.setTags(txt.category.subCategories)
         mainViewHolder.contentLike!!.text = String.format(Locale.getDefault(), "%d", txt.like)
+        mainViewHolder.contentBody!!.loadDataWithBaseURL(null, this.setJustifyText(body = txt.txt), HTML_FORMAT, UTF, null)
 
         this.setContentIcon(contentImg = mainViewHolder.contentImg, viewType = TXT)
     }
 
     private fun displayAd(adViewHolder: AdViewHolder, position: Int) {
         val ad = this.contents[position] as Ad
-        this.setContentIcon(adViewHolder.ivAdImg, AD)
-        adViewHolder.tvAdBody!!.text = ad.desc
+//        this.setContentIcon(adViewHolder.ivAdImg, AD)
+        adViewHolder.tvAdBody!!.loadDataWithBaseURL(null, this.setJustifyText(body = ad.desc), HTML_FORMAT, UTF, null)
     }
 
     private fun downloadAudio(audioPlayerView: AudioPlayerView?, url: String) {
@@ -126,6 +125,24 @@ class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         Picasso.with(this.context).load(url).into(ivContentImgSrc);
     }
 
+
+    private fun setJustifyText(body: String): String {
+        return "<html>" +
+                "<head>" +
+                "<style type=\"text/css\">" +
+                "@font-face{" +
+                "font-family: MyFont;" +
+                "src: url(\"file:///android_asset/fonts/Midan.ttf\")}" +
+                "body{" +
+                "font-family: MyFont;" +
+                "font-size: 20px;" +
+                "text-align: justify}</style>" +
+                "</head>" +
+                "<body dir=\"rtl\">" +
+                body +
+                "</body>" +
+                "</html>"
+    }
 
     override fun getItemViewType(position: Int): Int {
 
@@ -205,12 +222,12 @@ class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
     class AdViewHolder constructor(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-        var tvAdBody: TextView? = null
-        var ivAdImg: ImageView? = null
+        var tvAdBody: WebView? = null
+//        var ivAdImg: ImageView? = null
 
         init {
-            this.ivAdImg = this.itemView.findViewById(R.id.ivAd) as ImageView
-            this.tvAdBody = this.itemView.findViewById(R.id.tvAdBody) as TextView
+//            this.ivAdImg = this.itemView.findViewById(R.id.ivAd) as ImageView
+            this.tvAdBody = this.itemView.findViewById(R.id.tvAdBody) as WebView
         }
     }
 
@@ -248,16 +265,18 @@ class ContentAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         var contentImg: ImageView? = null
         var contentName: TextView? = null
         var contentLike: TextView? = null
-        var contentBody: TextView? = null
+        var contentBody: WebView? = null
         var contentTagBox: TextView? = null
         var contentMainCategory: TextView? = null
         val TV_HASH_TAG: ActiveHashTag = ActiveHashTag.Factory.create(Color.parseColor("#51e1cb"), null)
 
         init {
+
             this.contentImg = this.itemView.findViewById(R.id.ivContentImg) as ImageView?
             this.contentName = this.itemView.findViewById(R.id.tvContentName) as TextView?
             this.contentLike = this.itemView.findViewById(R.id.tvContentLike) as TextView?
-            this.contentBody = this.itemView.findViewById(R.id.tvContentBody) as TextView?
+            this.contentBody = this.itemView.findViewById(R.id.tvContentBody) as WebView?
+
             this.contentTagBox = this.itemView.findViewById(R.id.tvContentBoxTag) as TextView?
             this.contentMainCategory = this.itemView.findViewById(R.id.tvMainCategory) as TextView?
             TV_HASH_TAG.operate(this.contentTagBox)

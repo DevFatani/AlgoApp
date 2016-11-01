@@ -263,7 +263,7 @@ class FakeData {
         image1.category = this.categories[2]
         image1.img = "010.com"
         image1.like = 100
-        image1.src = "https://newevolutiondesigns.com/images/freebies/cat-wallpaper-24.jpg"
+        image1.src = "https://i.ytimg.com/vi/QX4j_zHAlw8/maxresdefault.jpg"
 
 
         val image2 = Image()
@@ -273,7 +273,7 @@ class FakeData {
         image2.category = this.categories[1]
         image2.img = "110.com"
         image2.like = 50
-        image2.src = "https://images6.alphacoders.com/334/334727.jpg"
+        image2.src = "http://www.auromere.com/img-books.jpg"
 
 
         val image3 = Image()
@@ -282,7 +282,7 @@ class FakeData {
         image3.txt = "إنّ البالغين الأكبر سنًا مُعرضون لكمية أكبر من مخاطر نقص النوم بما أنهم يختبرون ساعات نوم أقل ويختلف نموذج دورة النوم لديهم. ونتيجة لذلك، فإنّ مرحلة النوم العميق تُصبح قصيرة جدًا وقد تتوقف نهائيًا. وهناك العديد من العوامل التي تلعب دورًا في ذلك ومنها الشيخوخة وتناول الأدوية وعند وجود إحدى الحالات الطبية التي تُسبب الألم أثناء الليل كالتهاب المفاصل والتبوُّل الليلي المُتكرِّر والسرطان وأمراض الرئة."
         image3.category = this.categories[0]
         image3.like = 88
-        image3.src = "https://newevolutiondesigns.com/images/freebies/cat-wallpaper-2.jpg"
+        image3.src = "http://www.telegraph.co.uk/content/dam/motoring2/2015/12/01/mercedes-amg-gt-front-xlarge-xlarge_trans++rWYeUU_H0zBKyvljOo6zlkYMapKPjdhyLnv9ax6_too.jpg"
 
         videoList.add(image1)
         videoList.add(image2)

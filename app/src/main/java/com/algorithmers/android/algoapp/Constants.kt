@@ -13,5 +13,5 @@ val GIF: Int = 5
 val AD: Int = 6
 val IMAGE: Int = 7
 val MIX: Int = 100
-
-
+var HTML_FORMAT = "text/html; charset=UTF-8"
+var UTF = "utf-8"
